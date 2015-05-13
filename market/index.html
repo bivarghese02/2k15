@@ -1,0 +1,1035 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+
+	<title>tathva 15 </title>
+
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.scrollmagic.js"></script>
+
+	<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="./js/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<script src="./js/bjqs-1.3.js"></script>
+	<link type="text/css" rel="Stylesheet" href="./css/bjqs.css" />
+
+
+	<style>
+
+     
+		@font-face {
+			font-family: fontastique;
+			src: url("./fonts/fontastique.ttf");
+		}
+
+
+		@font-face {
+			font-family: subfont;
+			src: url("./fonts/Eurostile.ttf");
+		}
+
+		@font-face {
+			font-family: mainfont;
+			src: url("./fonts/CaviarDreams.ttf");
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			/* border: #000 dashed 1px;*/
+			font-family: mainfont;
+		
+		}
+
+		nav {
+			position: fixed;
+			background: #2ecc71;
+			width: 100%;
+			min-height: 50px;
+			z-index: 99;
+			box-shadow: 0px 0px 2px #000;
+			padding-top: 3px;
+			letter-spacing: 1px;
+			color: #eee;
+		}
+
+		nav ul li{
+			display: inline-block;
+			padding: 10px 15px;
+			text-shadow: 1px 1px 5px #111;
+		}
+
+		/* front page */
+
+		.front-page{
+
+			height: 720px;
+			padding-top: 50px;
+			background-image: url('./img/image1.jpg');
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.front-page h1{
+			font-family: fontastique;
+			font-size: 6em;
+			color: #eee;
+			text-align: center;
+			padding-top: 150px;
+			text-shadow:2px 2px 5px #000;
+
+		}
+
+		.about-page{
+			background: #272625;
+			padding: 25px 30px;
+			color:#eee;
+			font-family: mainfont;
+		}
+
+		.about-page h1{
+			font-size: 2em;
+
+
+		}
+
+		.about-page p{
+			text-align: justify;
+			line-height: 25px;
+
+		}
+
+		.about-sidebar{
+			width: 25%;
+			padding: 5%;
+			float: right;
+		}
+
+		.about-sidebar img {
+			width:100%;
+		}
+
+		.why-page{
+			position: relative;
+			width: 100%;
+			padding-top: 75px;
+			height:700px;
+			overflow: hidden;
+			color: #eee;
+			background:#5c97bf;
+			
+		}
+
+		ul.insights {
+			display: block;
+			position: relative;
+
+		}
+
+		ul.insights li{
+			
+			overflow: visible;
+			clear: both;
+			
+
+		}
+
+		ul.insights li .item{
+			overflow: hidden;
+		}
+
+		ul.insights li .item .image{
+			width:50%;
+
+			float: right;
+			clear: right;
+			margin: 5px 0px;
+			margin-right: 8px;
+			-moz-box-shadow: -3px 3px 5px 1px rgba(0,0,0,.3);
+			box-shadow: -3px 3px 5px 1px rgba(0,0,0,.3);
+		
+		}
+
+		ul.insights li .body{
+			width:50%;
+			position: absolute;
+			top:150px;
+			
+			padding: 50px;
+			font-family: mainfont;
+			font-size: 20px;
+			line-height: 35px;
+			text-align: justify;
+
+		}
+		.why-page .why-head h1{
+			font-size: 2em;
+			font-family: mainfont;
+			width: 50%;
+			position: absolute;
+			top:100px;
+			text-align: center;
+
+		}
+
+		.content{
+			height: 400px;
+			display: block;
+			clear: both;
+		}
+		.t14-page{
+			background: #272625;
+			padding: 25px 30px;
+			color:#eee;
+			font-family: mainfont;
+			clear: both;
+		}
+		.content-wrap{
+			display: block;
+			position: relative;
+		}
+
+		.parallax-image{
+			height:700px;
+			width:100%;
+			background-size: cover;
+			position: relative;
+			top:-400px;
+		}
+
+		.parallax-holder{
+			height:400px;
+			overflow: hidden;
+		}
+
+		.fancybox img{
+			width:25%;
+		}
+
+/* gallery */		
+
+		.gallery-page{
+			width:100%;
+			
+		}
+
+		.slideshowwrap{
+			margin: 20px auto;
+			width:45%;
+			
+		}
+
+
+		.gallery-slide{
+			width:100%;
+			margin:0 auto;
+			text-align: center;
+		}
+
+		.gallery-slide .gallerythumb{
+			margin: 0px 0px;
+			padding: 0px 0px;
+		}
+
+		.gallery-slide .gallerythumb img {
+			width:15%;
+			margin: 5px 0px;
+			padding: 0 0;
+			display: inline-block;
+			border:1px solid #222;
+			-moz-border-radius:5px;
+			border-radius:5px;
+			-moz-box-shadow: 2px 2px 5px 1px #222;
+			box-shadow: 2px 2px 5px 1px #222;
+		}
+
+		.media-page{
+			width:100%;
+			
+		}
+
+
+		.contact-page{
+			padding-top: 25px;
+			padding-bottom: 10px;
+		}
+
+		.team{
+			width:100%;
+			text-align: center;
+			padding: 20px 0px;
+		}
+		.team .subteam{
+			text-align: center;
+			display: inline-block;
+		}
+		.team .fifty{
+			width:48%;
+			
+		}
+
+		.team .quarter{
+			width:24%;
+
+		}
+
+		.team h2{
+			padding-bottom: 15px;
+			text-decoration: underline;
+		}
+
+		ul.member{
+			display: inline-block;
+			vertical-align: top;
+			/*border: 1px dashed #000;*/
+		}
+		ul.member li{
+			list-style: none;
+			font-size: 1em;
+		}
+		ul.member li:first-child{
+			font-size: 1.5em;
+		}
+		ul.fifty{
+			width:48%;
+		}
+		ul.pointtwo{
+			width:19%;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<header>
+		<nav>
+			<center><ul><li>home</li>
+				<li>about us</li>
+				<li>Why sponser us</li>
+				<li>tathva '14 </li>
+				<li>Gallery</li>
+				<li>media</li>
+				<li>Previous Sponsers</li>
+				<li>Contact Us</li>
+			</ul></center>
+		</nav>
+	</header>
+
+	<div class="front-page">
+
+		<h1> tathva 15 </h1>
+
+	</div>
+
+	<div class="about-page">
+
+		<h1>about us</h1>
+
+		<div class="about-sidebar">
+			<img src="./img/logo.png">
+		</div>
+
+		<p>
+			Born in the campus of NIT-Calicut, Tathva has evolved to become one of the largest techno-management symposiums in India over the past twelve years. True to its motto, Tathva stands to usher the future society into an age of development brought over by innovation in technology. Over the years, Tathva has made its prime importance to cater to the public through exhibitions and world class lectures put together throughout the festival. Tathva also brings the world of innovation to our country through renowned scientists and luminaries who inspire the budding youth through their experiences and cutting edge research. 
+		</p>
+		<p>
+			<br>Tathva aims to encompass the entirety of our country’s current development plan by taking heed of our societal duties to use technology as a tool to help the address the significant problems many of our peers still face. Through the social initiatives, Tathva aims to construct a platform for the youth to empower sections of our community through eco-friendly and sustainable ventures. Tathva is foremost an organization run by the entire student community of NIT-C which is divided into three major committees for optimal operation. The organizational structure is headed by the Technical Affairs Secretary and features over 1000 coordinators to put together the spectacle called Tathva.Overall, Tathva incorporates all these distinct traits to become a role-model for the younger generation.
+		</p>
+
+	</div>
+
+
+	<div  class="why-page">
+		<div class="why-head">
+			<h1>Why Sponser Us</h1>
+		</div>
+		<ul class="insights" >
+			<li class="insight-part1 active">
+				<div class="body" style="visibility: hidden; opacity: 0;">
+					<p>Tathva records an annual footfall of over 15,000 attendees amongst which 95 % are in the age group of 16-25. By being a part of Tathva, brand loyalty can be encouraged from an early age</p>
+				</div>
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#f00">1</span>
+				</div>
+
+			</li>
+			<li class="insight-part2">
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#ff0">1</span>
+				</div>
+
+			</li>
+			<li class="insight-part3">
+				<div class="body" style="visibility: hidden; opacity: 0;">
+					<p>By being a part of Tathva, brand visibility is significantly improved through our websites and android applications. A logo and link to your company’s website can be posted on either which receives significant traffic.
+					</p>
+				</div>
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#ff0">1</span>
+				</div>
+			</li>
+			<li class="insight-part4">
+
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#2e4510">2 here</span>
+				</div>
+			</li>
+			<li class="insight-part5">
+				<div class="body" style="visibility: hidden; opacity: 0;">
+					<p>Brand visibility can be significantly improved through 3-D banners and kiosks that can be set up at prominent locations in the campus such as the Open Air Theatre, Centre Circle etc.
+					</p>
+				</div>
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#ccee55"></span>
+				</div>
+			</li>
+			<li class="insight-part6">
+
+				<div class="item" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+					<span class="image" style="height:200px;background:#F00"></span>
+				</div>
+			</li>
+
+
+		</ul>
+
+	</div>
+	
+	<!--div style="display:block;clear:both;background:#000">.</div-->
+
+
+<div class="t14-page" style="position:relative">
+	<h1>tathva 14</h1>
+	<p>The last iteration of Tathva raised the standards of the symposium to a whole new level. Tathva 13’ achieved its success through a combination of technology and entertainment. The underlying spirit of the festival was realized through world class lectures by the likes of Jeff Lieberman and stunning exhibitions from the Indian Navy and ISRO amongst many. A due amount of technological entertainment was derived from the ever successful automobile exhibition ‘Wheels’ which stunned the masses through the sheer brilliance of the vehicles on display. Tathva 13’ evolved into one of the country’s leading platforms for innovation through its initiative Aavishkar, which undertook the technological development of a rural village in Kerala through eco-friendly philosophies. By retaining its individual zest to contribute to our nation’s progress, Tathva 13’ was the most inspiring edition of the annual festival yet. 
+	</p>
+</div>
+
+<div class="parallax-first parallax-holder">
+  		<div class="parallax-image" style="transform: translate3d(0px, 0px, 0.01px); background-image: url(./img/image2.jpg);"></div>
+  	</div>						
+
+
+<div class="gallery-page" >
+	<h1 style="font-size:2em;text-align:center;padding-top:5px;"> Gallery</h1>
+	
+	<div id="galleryslideshow" class="slideshowwrap">
+	<ul class="bjqs">
+	    <li class="gallery-slide">
+		    <a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/aavishkaar1.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar2.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar3.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar4.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar5.jpg"/></a>
+
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/aavishkaar6.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar7.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar8.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar9.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar10.jpg"/></a>
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/aavishkaar11.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event13.jpg"/></a>
+		</li>
+
+		 <li class="gallery-slide">
+		    <a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/nites1.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites2.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/nites3.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites4.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/nites5.jpg"/></a>
+
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/nites6.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites7.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/nites8.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites9.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/nites10.jpg"/></a>
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/nites11.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/nites13.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/nites14.jpg"/></a>
+		</li>
+
+		 <li class="gallery-slide">
+		    <a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/event1.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event2.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event3.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event4.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event5.jpg"/></a>
+
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/event6.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event7.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event8.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event9.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event10.jpg"/></a>
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/event11.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event14.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event13.jpg"/></a>
+		</li>
+			
+	</ul>
+	</div>
+	
+</div>
+
+<div class="parallax-second parallax-holder">
+  		<div class="parallax-image" style="transform: translate3d(0px, 0px, 0.01px); background-image: url(./img/image3.jpg);"></div>
+  	</div>	
+
+
+
+<div class="media-page" >
+	<h1 style="font-size:2em;text-align:center;padding-top:5px;"> Media </h1>
+	
+	<div id="galleryslideshow2" class="slideshowwrap">
+		<ul class="bjqs">
+	    <li class="gallery-slide">
+		    <a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/newspaper/english1.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/newspaper/english2.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/newspaper/english3.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/newspaper/english4.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar5.jpg"/></a>
+
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/aavishkaar6.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar7.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar8.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar9.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/aavishkaar10.jpg"/></a>
+
+			<a class="fancybox gallerythumb" rel="group" href="./img/gallery/aavishkar1.jpg"><img src="./img/gallery/thumbs/aavishkaar11.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/aavishkaar12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image1.jpg"><img src="./img/gallery/thumbs/event12.jpg"/></a>
+			<a class="fancybox gallerythumb" rel="group" href="./img/image2.jpg"><img src="./img/gallery/thumbs/event13.jpg"/></a>
+		</li>
+	</ul>
+
+</div>	
+
+
+
+
+<div class="parallax-third parallax-holder">
+  		<div class="parallax-image" style="transform: translate3d(0px, 0px, 0.01px); background-image: url(./img/image6.jpg);"></div>
+  	</div>	
+
+  	
+<div class="sponsors-page" >
+	<h1 style="font-size:2em;text-align:center;padding-top:5px;"> Previous Sponsors</h1>
+	
+	<div id="galleryslideshow3" class="slideshowwrap">
+		<ul class="bjqs">
+	    <li class="gallery-slide">
+	       <a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/nokia.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/sbt.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/isro.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/sbi.png"/></a>
+
+			<a class="gallerythumb"><img src="./img/sponsors/interveiwstreet.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/wipro.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/byju.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/dime.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/arbitron.png"/></a>
+
+			 <a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/adobe.png"/></a>
+			
+		</li>
+
+		 <li class="gallery-slide">
+	       <a class="gallerythumb"><img src="./img/sponsors/funskool.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/gateforum.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/sos.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/tcs.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/canara.png"/></a>
+
+			<a class="gallerythumb"><img src="./img/sponsors/gasotech.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/time.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/npcil.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/dtdc.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/pnb.png"/></a>
+
+			 <a class="gallerythumb"><img src="./img/sponsors/npcil.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/sendandturbo.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/supportmyschool.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/pnb.png"/></a>
+			<a class="gallerythumb"><img src="./img/sponsors/pnb.png"/></a>
+			
+		</li>
+
+	</ul>
+
+</div>		
+
+<div class="parallax-fourth parallax-holder">
+  		<div class="parallax-image" style="transform: translate3d(0px, 0px, 0.01px); background-image: url(./img/image7.jpg);"></div>
+  	</div>	
+
+ <div class="contact-page" >
+	<h1 style="font-size:2em;text-align:center;padding-top:5px;">Contact Us</h1>
+
+	<div class="team">	
+		<h2 style="text-align:center">Marketing Team</h2>
+	
+		<ul class="member pointtwo">
+				<li>Balu Mathews</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+		</ul>
+		<ul class="member pointtwo">
+				<li>Sherlock Holmes</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+		</ul>
+		<ul class="member pointtwo">
+				<li>Talyor Swift</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+		</ul>
+		<ul class="member pointtwo">
+				<li>Albert Einstein</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+		</ul>
+	</div>
+	
+	<div class="team">	
+	  <div class="subteam fifty">
+		    <h2 style="text-align:center">Public Relations</h2>
+			<ul class="member fifty">
+					<li>Balu Mathews</li>
+			   	   <li>+91 9567854575</li>
+			   	   <li>balumathews@tathva.org</li>
+			</ul>
+			<ul class="member fifty">
+					<li>Sherlock Holmes</li>
+			   	   <li>+91 9567854575</li>
+			   	   <li>balumathews@tathva.org</li>
+			</ul>
+			
+	  </div>
+
+	  <div class="subteam quarter">
+		    <h2 style="text-align:center">Wheels</h2>
+			<ul class="member">
+					<li>Mohanlal</li>
+			   	   <li>+91 9567854575</li>
+			   	   <li>balumathews@tathva.org</li>
+			</ul>
+			
+			
+	  </div>
+
+	  <div class="subteam quarter">
+		    <h2 style="text-align:center">Aavishkaar</h2>
+			<ul class="member">
+					<li>Balu Mathews</li>
+			   	   <li>+91 9567854575</li>
+			   	   <li>balumathews@tathva.org</li>
+			</ul>
+			
+			
+	  </div>
+
+	</div>
+
+	<div class="team">
+		<div class="subteam fifty">
+		 <h2 style="text-align:center">Workshops</h2>
+			<ul class="member fifty">
+				<li>Albert Einstein</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+			</ul>
+		</div>
+
+		<div class="subteam fifty">
+		 <h2 style="text-align:center">Overseas Contact</h2>
+			<ul class="member fifty">
+				<li>Albert Einstein</li>
+		   	   <li>+91 9567854575</li>
+		   	   <li>balumathews@tathva.org</li>
+			</ul>
+		</div>
+
+	</div>
+
+   <p style="text-align:center;font-size:1.2em;padding-top:25px">For any other queries, contact us at info@tathva.org</p>
+
+</div>				
+
+
+
+
+<script>
+
+
+	function randomAlphaNum() {
+		var rnd = Math.floor(Math.random() * 62);
+		if (rnd >= 52) return String.fromCharCode(rnd - 4);
+		else if (rnd >= 26) return String.fromCharCode(rnd + 71);
+		else return String.fromCharCode(rnd + 65);
+	}
+
+
+
+	jQuery(document).ready(function($) {
+
+
+		$(".fancybox").fancybox({
+		openEffect	: 'elastic',
+		closeEffect	: 'elastic'
+		});
+
+		$('#galleryslideshow').bjqs({
+		'height' : 400,
+		'width' : 620,
+		'responsive' : true,
+		'animtype' : 'fade', // accepts 'fade' or 'slide'
+		'animduration' : 450, // how fast the animation are
+		'animspeed' : 4000, // the delay between each slide
+		'automatic' : true, // automatic
+
+		'showcontrols' : true, // show next and prev controls
+		'centercontrols' : true, // center controls verically
+		'nexttext' : '', // Text for 'next' button (can use HTML)
+		'prevtext' : '', // Text for 'previous' button (can use HTML)
+		'showmarkers' : false, // Show individual slide markers
+		'centermarkers' : false, // Center markers horizontally
+
+		'keyboardnav' : true, // enable keyboard navigation
+		'hoverpause' : true, // pause the slider on hover
+
+		'usecaptions' : true, // show captions for images using the image title tag
+		'randomstart' : true, // start slider at random slide
+		'responsive' : true // enable responsive capabilities (beta)
+		});
+
+		$('#galleryslideshow2').bjqs({
+		'height' : 400,
+		'width' : 620,
+		'responsive' : true,
+		'animtype' : 'fade', // accepts 'fade' or 'slide'
+		'animduration' : 450, // how fast the animation are
+		'animspeed' : 4000, // the delay between each slide
+		'automatic' : true, // automatic
+
+		'showcontrols' : true, // show next and prev controls
+		'centercontrols' : true, // center controls verically
+		'nexttext' : '', // Text for 'next' button (can use HTML)
+		'prevtext' : '', // Text for 'previous' button (can use HTML)
+		'showmarkers' : false, // Show individual slide markers
+		'centermarkers' : false, // Center markers horizontally
+
+		'keyboardnav' : true, // enable keyboard navigation
+		'hoverpause' : true, // pause the slider on hover
+
+		'usecaptions' : true, // show captions for images using the image title tag
+		'randomstart' : true, // start slider at random slide
+		'responsive' : true // enable responsive capabilities (beta)
+		});
+
+		$('#galleryslideshow3').bjqs({
+		'height' : 400,
+		'width' : 620,
+		'responsive' : true,
+		'animtype' : 'fade', // accepts 'fade' or 'slide'
+		'animduration' : 450, // how fast the animation are
+		'animspeed' : 4000, // the delay between each slide
+		'automatic' : true, // automatic
+
+		'showcontrols' : true, // show next and prev controls
+		'centercontrols' : true, // center controls verically
+		'nexttext' : '', // Text for 'next' button (can use HTML)
+		'prevtext' : '', // Text for 'previous' button (can use HTML)
+		'showmarkers' : false, // Show individual slide markers
+		'centermarkers' : false, // Center markers horizontally
+
+		'keyboardnav' : true, // enable keyboard navigation
+		'hoverpause' : true, // pause the slider on hover
+
+		'usecaptions' : true, // show captions for images using the image title tag
+		'randomstart' : true, // start slider at random slide
+		'responsive' : true // enable responsive capabilities (beta)
+		});
+		
+  var controller = false;
+  var hammertime;
+  var parallaxImageHeight = 300;
+  var scrollBreakpoint = 1080; 
+  var parallaxScene1, parallaxScene2, parallaxScene3, parallaxScene4;
+  var insightsImageScene, insightsTextScenes = [], wordsScene;
+  var wordsTimeline;
+  var insightsTextTweenItems;
+  var insightsImageTween;
+  var insightsTextTweens ;
+  var getStartedOwlCarusell;
+  var doinInsight = false;
+  var doit; 
+
+  var useTranslate3d = false;
+  var parralaxScrollImageTween;
+
+  if(useTranslate3d){
+  	parralaxScrollImageTweenFrom = { y:0 };
+  	parralaxScrollImageTweenTo = { y:400, ease: Linear.easeNone };
+
+  } else {
+  	parralaxScrollImageTweenFrom = { y:0, z:0.01 };
+  	parralaxScrollImageTweenTo = { y:400, z:0.01, ease: Linear.easeNone };
+  }
+
+  setHeight();
+  doScrollMagic();
+
+ // alert($('.image').width());
+
+
+
+  function doScrollMagic(){
+  	var windowWidth = $(window).innerWidth();
+  	var windowHeight = $(window).innerHeight();
+
+  	if(windowWidth >= scrollBreakpoint ){
+  		controller = new ScrollMagic({});
+
+
+      var imageOffset = windowHeight / 2 * -1;
+      var parallaxImageDuration = windowHeight + parallaxImageHeight;
+
+     
+
+doInsightsScene();
+
+	  var parallaxImage1 = $('.parallax-first .parallax-image');
+      var parallaxTrigger1 = $('.parallax-first');
+      var parallaxTween1 = new TweenMax.fromTo(parallaxImage1, 1, parralaxScrollImageTweenFrom , parralaxScrollImageTweenTo);
+
+      parallaxScene1 = new ScrollScene({triggerElement: parallaxTrigger1, duration: parallaxImageDuration, offset: imageOffset})
+              .setTween(parallaxTween1)
+              .addTo(controller);
+
+
+      var parallaxImage2 = $('.parallax-second .parallax-image');
+      var parallaxTrigger2 = $('.parallax-second');
+      var parallaxTween2 = new TweenMax.fromTo(parallaxImage2, 1, parralaxScrollImageTweenFrom , parralaxScrollImageTweenTo);
+
+      parallaxScene2 = new ScrollScene({triggerElement: parallaxTrigger2, duration: parallaxImageDuration, offset: imageOffset})
+              .setTween(parallaxTween2)
+              .addTo(controller);
+
+      var parallaxImage3 = $('.parallax-third .parallax-image');
+      var parallaxTrigger3 = $('.parallax-third');
+      var parallaxTween3 = new TweenMax.fromTo(parallaxImage3, 1, parralaxScrollImageTweenFrom , parralaxScrollImageTweenTo);
+
+      parallaxScene3 = new ScrollScene({triggerElement: parallaxTrigger3, duration: parallaxImageDuration, offset: imageOffset})
+              .setTween(parallaxTween3)
+              .addTo(controller);
+
+      var parallaxImage4 = $('.parallax-fourth .parallax-image');
+      var parallaxTrigger4 = $('.parallax-fourth');
+      var parallaxTween4 = new TweenMax.fromTo(parallaxImage4, 1, parralaxScrollImageTweenFrom , parralaxScrollImageTweenTo);
+
+      parallaxScene4 = new ScrollScene({triggerElement: parallaxTrigger4, duration: parallaxImageDuration, offset: imageOffset})
+              .setTween(parallaxTween4)
+              .addTo(controller);
+
+
+      
+  }
+}
+
+
+  function doInsightsScene(){
+  	
+  	doinInsight = true;
+  	var windowWidth = $(window).innerWidth();
+  	var windowHeight = $(window).innerHeight();
+  	var mySceneObj = $('.why-page');
+
+  	var myScrollObj = $('.why-page ul.insights .item');
+  	var objScrollDist = Math.abs( $('.why-page ul.insights').innerHeight() - windowHeight + 164);
+  	var $myTexts = $('ul.insights .body');
+
+  	var showText = function(index) {
+  		
+  		$myTexts.each(function () {
+  			TweenMax.killTweensOf(this);
+  		});
+  		TweenMax.to( $myTexts , 0.4, { autoAlpha: 0, ease: Linear.easeNone } );
+  		if (index >= 0) {
+  			TweenMax.to( $myTexts[index], 0.4, { autoAlpha: 1, ease: Linear.easeNone, delay: 0.4} );
+  		}
+  	};
+
+  	$myTexts.each(function(key, value){
+  		var textOffset = (key == 0) ? -1*windowHeight/2 : 0;
+    
+      var scene = new ScrollScene( { triggerElement: $(value).next(), offset: textOffset, duration: 0} )
+      .on("start", function ( e ) { showText(e.scrollDirection === "REVERSE" ? key-1 : key); })
+      .addTo(controller);
+      insightsTextScenes.push(scene);
+  });
+
+  	insightsImageTween = new TweenMax.to( myScrollObj, 100, { y: '-=' + objScrollDist, ease: Linear.easeNone } );
+
+    insightsImageScene = new ScrollScene({triggerElement: mySceneObj, offset: windowHeight/2 ,duration: 500})
+    .setTween(insightsImageTween)
+    .setPin(mySceneObj,{pushFollowers: true, spacerClass: 'content-wrap'})
+    .addTo(controller);
+
+    doinInsight = false;
+}
+
+function changeInsightScene(){
+	var windowWidth = $(window).innerWidth();
+	var windowHeight = $(window).innerHeight();
+	var objScrollDist = Math.abs( $('.why-page ul.insights').innerHeight() - windowHeight + 164);
+   
+    insightsImageTween.progress(0);
+    insightsImageTween.updateTo({css: {y: '-=' + objScrollDist}}, true);
+    insightsImageScene.setTween(insightsImageTween);
+    insightsImageScene.offset( windowHeight/2 );
+    insightsImageScene.update(true);
+}
+
+
+  $(window).on("resize", function () {
+  	clearTimeout(doit);
+  	doit = setTimeout(resizedw, 150);
+  });
+
+  function resizedw(){
+  	windowHeight = $(window).innerHeight();
+  	windowWidth = $(window).innerWidth();
+  	imageOffset = windowHeight / 2 * -1;
+
+  	parallaxImageDuration = windowHeight + parallaxImageHeight;
+
+   
+    if(windowWidth >= scrollBreakpoint){
+    	$('.first-scene-pin').css({
+    		"height": windowHeight,
+    		"min-height": windowHeight
+    	});
+
+    	$('.second-scene-pin').css({
+    		"height": windowHeight,
+    		"min-height": windowHeight
+    	});
+    }
+    setHeight();
+    toggleController();
+}
+
+
+  function setHeight() {
+    var windowHeight = $(window).height(); 
+    var windowWidth = $(window).width(); 
+
+    /*
+    $('body.new-frontpage #content article').each(function(){
+    	if( $( this ).hasClass('top-part') ){
+    		$( this ).css( 'height', windowHeight );
+    	} else if( $( this ).hasClass('part2') ){
+    		if(windowWidth > scrollBreakpoint ){
+    			$( this ).find( '.content' ).css( 'height', windowHeight);
+    		} else {
+    			$( this ).css( 'height', 'auto' );
+    			$( this ).find( '.content' ).css( 'height', 'auto' );
+    		}
+    	}
+    	else if( $( this ).hasClass('part6') ){
+    		if(windowWidth > scrollBreakpoint ){
+    			$( this ).find( '.content' ).css( 'height', windowHeight);
+    		} else {
+    			$( this ).find( '.content' ).css( 'height', 'auto' );
+    		}
+    	}
+    });
+    if( $('body').hasClass('new-frontpage') && windowWidth >= scrollBreakpoint ){
+    	$('#content').css( 'padding-top', windowHeight );
+    } else {
+    	$('#content').css( 'padding-top', 0 );
+    }
+   */
+
+};
+
+
+
+  function toggleController(){
+  	var windowWidth = $(window).innerWidth();
+  	if(windowWidth >= scrollBreakpoint ){
+
+  		if( !controller ){
+  			doScrollMagic();
+  		} else {
+       
+
+        parallaxScene1.duration( parallaxImageDuration );
+        parallaxScene1.offset( imageOffset );
+
+        parallaxScene2.duration( parallaxImageDuration );
+        parallaxScene2.offset( imageOffset );
+
+        parallaxScene3.duration( parallaxImageDuration );
+        parallaxScene3.offset( imageOffset );
+
+        parallaxScene4.duration( parallaxImageDuration );
+        parallaxScene4.offset( imageOffset );
+
+        changeInsightScene();
+    }
+
+} else {
+	if( controller ){
+		
+		if(insightsImageScene){
+			insightsImageScene.destroy(true);
+
+			$.each(insightsTextScenes, function () {
+				this.removeTween(true);
+				this.enabled(false);
+			});
+
+			TweenMax.set( $('.why-page'), {clearProps:"all"});
+			TweenMax.set( $('.why-page ul.insights .item'), {clearProps:"all"});
+			TweenMax.set( $('.why-page ul.insights .body'), {clearProps:"all"});
+		}
+
+		
+
+		controller = controller.destroy(true);
+		controller = false;
+	}
+}
+}
+
+});
+
+
+</script>
+
+
+</body>
+</html>
